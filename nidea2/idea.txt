@@ -1,0 +1,3 @@
+crear un boton que "apague" las luces de la pagina, este debe cambiar el z-index de todos los elementos principales...(primordialmente los clickeables)
+
+cambiar la imagende del boton

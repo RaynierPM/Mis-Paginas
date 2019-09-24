@@ -1,0 +1,404 @@
+/* ---- Globales ---- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,*:after, *:before {
+	box-sizing: inherit;
+}
+
+.clearfix, .clearfix:after, .clearfix:before {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.contenedor {
+	padding: 10px 15px;
+	margin-bottom: 10px;
+}
+
+
+body {
+	background: linear-gradient(to top,#6000e0,#999,#888,#777,#666, #555, #444, #333, #222, #111, #000);
+	background-attachment:fixed;
+	font-family: 'chilanka';
+}
+
+.none {
+	margin: 0;
+	padding: 0;
+	background: #0000;
+}
+
+h2 {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: #ddd 1px 1px 3px;
+	margin-bottom: 10px;
+	display: inline-block;
+	color: #6000e0;
+	font-size: 2.2em;
+	font-family: 'lobster';
+	text-decoration: underline;
+}
+
+footer, main {
+	width: 95%;
+	margin: 0 auto;
+}
+
+main p {
+	font-size: 1.15em;
+	text-shadow: #000 .5px .5px 1px;
+}
+
+/* ---- Header ---- */
+
+
+/* --- hero --- */
+
+header {
+	display: block;
+	position: relative;
+}
+
+div.hero {
+	width: 100%;
+	box-shadow: #ccc 10px 2px 30px;
+	border-bottom: solid #111;
+	background: #fff;
+	margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 786px) {
+	div.hero {
+
+	}
+}
+
+
+/* -- logo --*/
+div.logo {
+	width: 50%;
+	float: left;
+	margin: 15px auto;
+}
+
+@media only screen and (min-width: 768px)  {
+	div.logo {
+		width: 40%;
+		display: inline-block;
+	}
+}
+
+
+div.logo h1 {
+	font-size: 5vw;
+	text-shadow: #6000e0 1px 1px 3px;
+	font-family: 'Lobster';
+}
+
+@media only screen and (min-width: 768px) {
+	div.logo h1 {
+		width: 10vw;
+	}
+
+}
+/* -- botoncito --*/
+
+div.botoncito {
+	width: 50px;
+	border: #000 solid;
+	float: right;
+	padding: 3px;
+	margin: 10px auto;
+}
+
+@media only screen and (min-width: 768px) {
+	div.botoncito {
+		display: none;
+	}
+
+} 
+div.botoncito span {
+	margin-bottom: 5px;
+	display: block;
+	background: #000;
+	height: 5px;
+}
+
+div.botoncito span:last-child {
+	margin-bottom: 0;
+}
+
+div.botoncito:hover {
+	cursor: pointer;
+}
+
+/* -- header nav -- */
+
+header nav {
+	width: 100%;
+	clear: both;
+	padding: 20px;
+}
+
+
+@media only screen and (min-width: 786px) {
+	header nav {
+		width: 60%;
+		display: inline-block;
+
+	}
+}
+
+header nav ul {
+	list-style: none;
+}
+
+header nav ul li a {
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+	padding: 20px 15px;
+	background: #6000e0;
+	font-size: 1.4em;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 20px;
+	font-weight: bold;
+	transition: ease .7s all;
+	text-shadow: #000 1px 1px 7px;
+	box-shadow: #333 1px 1px 10px;
+}
+
+@media only screen and (min-width: 786px) {
+	header nav ul li a{
+		width: 32.02%;
+		float: right;
+		margin-right: 5px; 
+	}
+
+}
+
+header nav ul li a:hover {
+	/*background: #4000a0;*/
+	/*background-image: url(../recursos/universo.jpeg);*/
+	animation: boton 5s infinite;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: scale(1.02);
+	text-shadow: #fff 1px 1px 7px;
+}
+
+header nav ul li a:fist-child(1) {
+	animation: boton infinite 5s;
+}
+
+/* --- Main/sections ---  */
+
+@keyframes boton {
+	0% {
+		background-image: url(../recursos/universo.jpeg);
+	}
+	50% {
+		background-image: url(../recursos/sky-space-dark-galaxy.jpg);
+	}
+	100% {
+		background-image: url(../recursos/universo.jpeg);
+	}
+}
+
+
+
+
+
+/* fin idiotez*/
+
+
+main {
+	width: 100%;
+
+}
+
+section {
+	margin-bottom: 10px;
+
+}
+
+article {
+	width: 100%;
+	padding: 10px;
+	background: #ccc9;
+}
+
+@media only screen and (min-width: 786px) {
+
+article	{
+	width: 100%;
+}
+
+}
+
+div.separador {
+	width: 100%;
+	clear: both;
+	margin-bottom: 10px;
+}
+@media only screen and (min-width: 786px) {
+
+div.separador {
+	width: 75%;
+	float: left;
+}
+
+}
+
+
+div.parallax {
+	width: 100%;
+	padding: 10px;
+	position: relative;
+}
+
+div.parallax:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-image: url(../recursos/universo.jpeg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+
+/* -- aside -- */
+
+aside {
+	background: #ccc7;
+
+}
+
+@media only screen and (min-width: 786px) {
+aside {
+	width: 24%;
+	float: right;
+}
+
+}
+
+
+/* --- footer --- */
+footer {
+	background: #6000e033;
+	width: 100%;
+}	
+
+div.info-footer {
+	width: 100%;
+	padding: 10px;
+	border-bottom: 5px solid #fff;
+}
+
+@media only screen and (min-width: 786px) {
+	
+	div.info-footer {
+	width: 49%;
+	border-right: #fff 5px solid;
+	border-bottom: none;
+	float: left;
+
+	}
+}
+
+div.info-footer p {
+	font-size: 1.15em;
+	text-shadow: #999 .5px .5px 1px;
+}
+
+footer div.redes {
+	width: 100%;
+	padding: 10px;
+}
+
+footer div.redes p {
+	font-size: 1.15em;
+	text-shadow: #999 .5px .5px 1px;
+}
+
+@media only screen and (min-width: 786px) {
+	footer div.contenedor div.redes {
+		width: 49.5%;
+		float: right;
+	}
+}
+
+
+
+
+
+/* --- prueba-boton-modo ---*/
+
+div.modo {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	background-image: url(../recursos/bombilla.png);
+	opacity: 0;
+	border: solid 5px #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/*background: #000e;*/
+	height: 50px;
+	width: 50px;
+	animation: desvanecer 3s linear ;
+	position: fixed;
+	z-index: 1;
+	transition: .500ms ease all;
+}
+
+
+@media only screen and (min-width: 786px) {
+	div.modo {
+		top: 150px;
+	}
+
+}
+div.modo:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+div.pantalla {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background: #0000;
+	position: fixed;
+	display: none;
+}
+
+@keyframes desvanecer {
+	from {
+		opacity: 0.8;
+	}
+	to {
+		opacity: 0;
+	}
+}
