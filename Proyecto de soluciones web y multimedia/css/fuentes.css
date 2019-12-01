@@ -1,0 +1,19 @@
+@font-face {
+	font-family: Lobster;
+	src: url(../fuentes/Lobster-Regular.ttf);
+}
+
+@font-face {
+	font-family: PlayFairDisplay;
+	src: url(../fuentes/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+	font-family: Righteous;
+	src: url(../fuentes/Righteous-Regular.ttf);
+}
+
+@font-face {
+	font-family: poppins;
+	src: url(../fuentes/Poppins-Medium.ttf);
+}

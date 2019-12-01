@@ -1,0 +1,628 @@
+* {margin: 0; padding: 0;}
+
+html {
+	box-sizing: border-box;
+}
+
+*,*:before,*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: ;
+}
+
+h2 {
+	color: #fff;
+	font-size: 2rem;
+}
+
+h3 {
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+p {
+	font-family: Righteous;
+}
+/* -- header -- */
+
+header {
+	background: #000;
+	/*maquetacion*/
+
+	width: 100%;
+	height: 100vh;
+
+	/*box-shadow: #000 1px 1px 20px;*/
+
+	/*flex*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 786px) {
+	header {
+		height: 80vh;
+	}
+}
+
+
+nav {
+	background: #fff;
+	width: 100%;
+	box-shadow: #000 1.5px 1.5px 15px;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	/*flex*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/*flex-wrap: nowrap;*/
+
+	z-index: 10;
+
+}
+
+.nav1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+
+}
+
+.nav1 div.miniLogo {
+	width: 100px;
+}
+
+nav div.miniLogo {
+	width: 150px;
+	margin-left: 30px;
+
+	transition: width .8s ease;
+	/*maquetacion*/
+
+}
+
+nav div.miniLogo img {
+	width: 100%;
+}
+
+div.botones {
+	/*background: #999;*/
+	/*maquetacion*/
+	
+	width: 70%;
+	padding: 5px;
+
+	/*flex*/
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+div.botones div.logito {
+	/*display: none;*/
+}
+
+@media only screen and (max-width: 786px) {
+	div.botones {
+		position: fixed;
+		left: -100%;
+		top: 0;
+		width: 50%;
+		height: 100vh;
+
+		background: #eee;
+
+		flex-direction: column;
+		justify-content: center;
+		padding: 0px;
+		/*display: none;*/
+
+		overflow: hidden;
+		transition: left .6s ease-in-out;
+		box-shadow: #555 1px 1px 15vh;
+
+		z-index: 6;
+
+	}
+
+	div.botones div.logito {
+		display: block;
+		margin: 15% 0;
+
+		width: 80%;
+		height: 40vh;
+		background-image: url(../imagenes/logo.png);
+		background-position: center center;
+		background-size: cover;
+	}
+}
+@media only screen and (max-width: 486px) {
+	div.botones {
+		width: 65%;
+	}
+
+}
+
+@media only screen and (max-width: 350px) {
+	div.botones {
+		width: 80%;
+	}
+}
+
+
+div.botones a {
+	background: #4d80e4;
+	transition: background .5s ease-in-out,
+				transform .5s; 
+
+	/*width: 120px;*/
+	
+	box-shadow: #000 1px 1px 4px;
+	border-radius: 18px;
+	flex-grow: 1;
+	height: 50px;
+
+	/*maquetacion*/
+
+	display: inline-block;
+	margin: 0px 13px;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+
+div.botones a:hover {
+	background: #2e279d;
+	transform: scale(1.01);
+}
+
+div.botones a p {
+		/*prueba- borrar luego*/
+		text-decoration: none;
+		color: #fff;
+		font-size: 1.3em;
+		
+		font-family: poppins;
+
+		text-align: center;
+
+		z-index: 1;
+}
+
+div.botones a div {
+	display: none;
+}
+
+@media only screen and (max-width: 786px) {
+	div.botones a {
+		width: 100%;
+		/*margin: 10px 0;*/
+		border-radius: 0px;
+
+		box-shadow: none;
+
+		/* flex */
+		flex-grow: 0;
+		position: relative;
+
+		z-index: 0;
+
+	}
+
+	div.botones a div{
+		display: block;
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(90deg, #00f, #007, #000,#700, #f00);
+
+		width: 0;
+		height: 100%;
+
+		transition: width .2s ease-in;
+
+		z-index: -1;
+	}
+
+	div.botones a:hover div {
+		width: 100%;
+	}
+}
+
+div.hero {
+	height: 100%;
+	background-image: url(../imagenes/Hero.jpg);
+	background-size: cover;
+	background-position: center center;
+	/*maquetacion*/
+
+	/*flex*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+header div.logo {
+	width: 80%;
+	background: #ddda;
+	padding: 10px;
+	/*maquetacion*/
+
+	display: flex;
+	align-items: center;
+
+	/*flex*/
+}
+
+header div.logo h1 {
+	width: 70%;
+	text-align: center;
+	color: #222;
+	
+	font-size: 6.5vw;
+	text-shadow: #fff .5px .5px 6px;
+	text-transform: uppercase;
+
+	font-family: PlayFairDisplay;
+}
+
+
+@media only screen and (max-width: 786px) {
+	header div.logo h1 {
+		font-size: 8vw;
+	}
+}
+
+header div.logo img {
+	width: 25%;
+}
+
+@media only screen and (max-width: 786px) {
+
+	div.boton-movil {
+		width: 50px;
+		height: 40px;
+
+		margin-right: 7px;
+
+		/*flex*/
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	div.boton-movil:hover {
+		cursor: pointer;
+	}
+
+	div.boton-movil span {
+		width: 100%;
+		margin: auto;
+		height: 5px;
+		background: #000;
+		display: block;
+	}
+
+	div.efecto {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		background: #5557;
+		position: fixed;
+		top: 0;
+		display: none;
+		left: 0;	
+
+		z-index: 5;
+
+	}
+}
+
+/*   main   */
+main {
+	display: flex;
+	flex-direction: column;
+	background: #ddd;
+	/*flex*/
+
+	padding: 20px 0;
+}
+/* secciones */
+
+section {
+	margin: 10px 0; 
+}
+
+section.nosotros {
+	padding: 20px 10px;
+	background: #000;
+	box-shadow: #000 1px 1px 3px;
+
+	/*flex*/
+	display: flex;
+	flex-direction: column;
+}
+
+section.nosotros div.sobreNosotros {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*flex*/
+
+}
+
+section.nosotros h3 {
+	text-transform: uppercase;
+	text-align: center;
+
+	text-shadow: #000 1px 1px 4px;
+}
+
+section.nosotros p {
+	width: 75%;
+	color: #eee;
+
+	text-align: center;
+}
+
+main section.MVV {
+	width: 100%;
+	height: 85vh;
+	background: #151515;
+	padding: 25px;
+	overflow: hidden;
+
+	/*z-index: -2;*/
+
+
+	/*flex*/
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+/*
+@media only screen and (max-width: 786px) {
+	main section.MVV {
+		height: 100vh
+	}
+}*/
+
+section.MVV h2 {
+	text-align: center
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+section.MVV div.mision {
+	width: 28%;
+	padding: 15px;
+	box-shadow: #000 5px 5px 14px;
+
+
+	background: #747474;
+
+	position: relative;
+	text-align: center;
+
+	/*z-index: -1;*/
+}
+
+@media only screen and (max-width: 786px) {
+	section.MVV div.mision {
+		width: 80%;
+		box-shadow: #000 5px 5px 14px;
+
+	}
+}
+
+section.MVV div.vision, section.MVV div.valores {
+	width: 100%;
+	padding: 15px;
+	background: #989898;
+	text-align: center;
+
+}
+
+@media only screen and (max-width: 950px) {
+	section.MVV div.vision, section.MVV div.valores {
+		width: 60%;
+	}
+}
+
+section.MVV div.vision {
+	position: absolute;
+	left: 90%;
+	top: 90%;
+
+	width: 100%;
+	box-shadow: #000 -5px -5px 14px;
+}
+
+section.MVV div.valores {
+	position: absolute;
+	right: 90%;
+	top: 90%;
+
+	width: 100%;
+	box-shadow: #000 -5px -5px 14px;
+}
+
+@media only screen and (max-width: 786px) {
+	
+	section.MVV div.vision {
+		width: 100%;
+		top: 130%;
+		left: 0;
+
+		box-shadow: #000 5px 5px 14px;
+
+	} 
+
+	section.MVV div.valores {
+		width: 100%;
+		top: 260%;
+		left: 0;
+
+		box-shadow: #000 5px 5px 14px;
+
+	}
+}
+
+
+
+/*   footer   */
+
+footer {
+	background: #000;
+	padding: 15px 20px;
+
+
+	/*flex*/
+	display: flex;
+}
+
+@media only screen and (max-width: 786px) {
+	footer {
+		flex-direction: column;
+	}
+}
+
+footer > div {
+	flex-grow: 1;
+	padding: 10px;
+
+	/*background: #4449;*/
+}
+
+footer > div h3 {
+	font-size: 2rem;
+	width: 100%;
+	margin: 10px 0;
+}
+
+div.nosotroF {
+	border-right: 2.5px #fff solid;
+	width:60%;
+
+	/*flex*/
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+@media only screen and (max-width: 786px) {
+	footer div.nosotroF {
+		width: 100%;
+		border-right: none;
+		border-bottom: #fff 2.5px solid;
+	}
+}
+
+div.nosotroF p {
+	color: #fff;
+	text-align: justify;
+}
+
+.btn-Nosotros {
+	display: inline-block;
+	padding: 10px 15px;
+	margin: 10px 0;
+
+	color: #fff;
+	text-decoration: none;
+	/*font-size: 1rem;*/
+	font-weight: bold;
+
+	border: #fff 1.5px solid;
+
+	transition: background .4s ease-in,
+				color .4s ease-in,
+				border .4s ease-in;
+}
+
+.btn-Nosotros:hover {
+	background: #fff;
+	color: #000;
+	border: #444 1.5px solid;
+}
+
+div.redesSociales {
+	/*flex*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div.ico-redes {
+	width: 100%;
+	margin: auto;
+
+
+	/*flex*/
+	display: flex;
+	justify-content: space-around;
+}
+
+div.ico-redes a {
+	display: block;
+	padding: 10px;
+	width: 50px;
+	height: 50px;
+	
+	color: #000;
+	font-size: 1.4em;
+
+	margin: 5px;
+	border-radius: 50%;
+	text-align: center;
+
+	transition: color .4s .3s,
+				background .4s .3s,
+				transform .3s;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.facebook {
+	background: #3b5998;
+}
+
+.twitter {
+	background: #00acee;
+}
+
+.instagram {
+	background: linear-gradient(240deg, #405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D,#F56040,#F77737,#FCAF45,#FFDC80);
+	transition: transform .3s 0s!important;
+
+}
+
+div.ico-redes a:hover {
+	background: #4449;
+	color: #fff;
+
+	transform: scale(1.09);
+}
+
+
+		/*-- pagina-Contenido -- */
+
+
+		/*-- pagina-Nosotros -- */
